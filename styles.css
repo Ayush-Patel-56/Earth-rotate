@@ -1,0 +1,94 @@
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            margin-top: 10vh;
+            margin-left: 10vw;
+            width: 70vw;
+            height: 70vh;
+            background-color: #000000;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            border: 3px solid black;
+            border-radius: 50px;
+        }
+
+        .earth {
+            width: 50px;
+            height: 50px;
+            background: 
+                /* continents */
+                radial-gradient(circle at 30% 40%, #2e8b57 0 8px, transparent 9px),
+                radial-gradient(circle at 70% 60%, #3cb371 0 10px, transparent 11px),
+                radial-gradient(circle at 50% 20%, #2e8b57 0 6px, transparent 7px),
+                radial-gradient(circle at 60% 80%, #3cb371 0 7px, transparent 8px),
+                radial-gradient(circle at 20% 70%, #2e8b57 0 9px, transparent 10px),
+                /* oceans */
+                radial-gradient(circle at 50% 50%, #1e90ff, #0066cc 60%);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(30, 144, 255, 0.6) inset, 0 0 6px rgba(30, 144, 255, 0.5);
+            animation: earth 10s linear infinite;
+
+            
+        }
+
+        .moon-orbit {
+            position: absolute;
+            top: 33%;
+            left: 39%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            border: 2px solid #9a9a9a;
+            border-radius: 50%;
+            animation: moon-orbit 10s linear infinite;
+            
+        }
+
+        .moon {
+            width: 50px;
+            height: 50px;
+            background:
+                /* craters */
+                radial-gradient(circle at 30% 35%, rgba(0,0,0,0.22) 0 4px, transparent 5px),
+                radial-gradient(circle at 65% 50%, rgba(0,0,0,0.18) 0 6px, transparent 7px),
+                radial-gradient(circle at 45% 70%, rgba(0,0,0,0.16) 0 3px, transparent 4px),
+                radial-gradient(circle at 75% 30%, rgba(0,0,0,0.2) 0 3px, transparent 4px),
+                radial-gradient(circle at 25% 65%, rgba(0,0,0,0.14) 0 5px, transparent 6px),
+                /* base shading */
+                radial-gradient(circle at 40% 35%, #e9e9e9, #c9c9c9 65%);
+            border-radius: 50%;
+            box-shadow: inset -6px -6px 10px rgba(0,0,0,0.18), inset 6px 6px 10px rgba(255,255,255,0.25);
+            animation: moon 10s linear infinite;
+            
+        }
+
+        @keyframes earth {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes moon {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes moon-orbit {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
